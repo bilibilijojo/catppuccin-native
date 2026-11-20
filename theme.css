@@ -1,0 +1,383 @@
+/* Catppuccin Native. Palette sources and mappings are in COLOR-SPEC.md. */
+.theme-light :is(.workspace, .status-bar, .titlebar, .titlebar-button-container, .workspace-drawer, .modal:where(.mod-settings, .mod-community-theme)) {
+  --cpd-rosewater: #dc8a78;
+  --cpd-flamingo: #dd7878;
+  --cpd-pink: #ea76cb;
+  --cpd-mauve: #8839ef;
+  --cpd-red: #d20f39;
+  --cpd-maroon: #e64553;
+  --cpd-peach: #fe640b;
+  --cpd-yellow: #df8e1d;
+  --cpd-green: #40a02b;
+  --cpd-teal: #179299;
+  --cpd-sky: #04a5e5;
+  --cpd-sapphire: #209fb5;
+  --cpd-blue: #1e66f5;
+  --cpd-lavender: #7287fd;
+  --cpd-text: #4c4f69;
+  --cpd-subtext-1: #5c5f77;
+  --cpd-subtext-0: #6c6f85;
+  --cpd-overlay-2: #7c7f93;
+  --cpd-overlay-1: #8c8fa1;
+  --cpd-overlay-0: #9ca0b0;
+  --cpd-surface-2: #acb0be;
+  --cpd-surface-1: #bcc0cc;
+  --cpd-surface-0: #ccd0da;
+  --cpd-base: #eff1f5;
+  --cpd-mantle: #e6e9ef;
+  --cpd-crust: #dce0e8;
+  --cpd-ink-accent: 45%;
+  --cpd-callout-title-accent: 35%;
+}
+
+.theme-dark :is(.workspace, .status-bar, .titlebar, .titlebar-button-container, .workspace-drawer, .modal:where(.mod-settings, .mod-community-theme)) {
+  --cpd-rosewater: #f2d5cf;
+  --cpd-flamingo: #eebebe;
+  --cpd-pink: #f4b8e4;
+  --cpd-mauve: #ca9ee6;
+  --cpd-red: #e78284;
+  --cpd-maroon: #ea999c;
+  --cpd-peach: #ef9f76;
+  --cpd-yellow: #e5c890;
+  --cpd-green: #a6d189;
+  --cpd-teal: #81c8be;
+  --cpd-sky: #99d1db;
+  --cpd-sapphire: #85c1dc;
+  --cpd-blue: #8caaee;
+  --cpd-lavender: #babbf1;
+  --cpd-text: #c6d0f5;
+  --cpd-subtext-1: #b5bfe2;
+  --cpd-subtext-0: #a5adce;
+  --cpd-overlay-2: #949cbb;
+  --cpd-overlay-1: #838ba7;
+  --cpd-overlay-0: #737994;
+  --cpd-surface-2: #626880;
+  --cpd-surface-1: #51576d;
+  --cpd-surface-0: #414559;
+  --cpd-base: #303446;
+  --cpd-mantle: #292c3c;
+  --cpd-crust: #232634;
+  --cpd-ink-accent: 100%;
+  --cpd-callout-title-accent: 75%;
+}
+
+/* Secondary panes and controls share the same palette roles. */
+.workspace :is(.mod-sidedock, .workspace-tab-header-container, .workspace-ribbon, .sidebar-toggle-button, .view-header),
+.workspace-drawer,
+.titlebar,
+.titlebar-button-container,
+.status-bar,
+.modal.mod-settings,
+.modal.mod-community-theme {
+  --cpd-chrome-hover: color-mix(in srgb, var(--cpd-surface-0) 55%, var(--cpd-mantle));
+  --cpd-chrome-selected: color-mix(in srgb, var(--cpd-mauve) 15%, var(--cpd-mantle));
+  --cpd-chrome-accent: color-mix(in srgb, var(--cpd-mauve) var(--cpd-ink-accent), var(--cpd-text));
+
+  --text-normal: var(--cpd-text);
+  --text-muted: var(--cpd-subtext-1);
+  --text-faint: var(--cpd-subtext-0);
+  --icon-color: var(--cpd-subtext-1);
+  --icon-color-hover: var(--cpd-text);
+  --icon-color-focused: var(--cpd-text);
+  --icon-color-active: var(--cpd-chrome-accent);
+  --background-modifier-hover: var(--cpd-chrome-hover);
+  --background-modifier-active-hover: var(--cpd-chrome-selected);
+  --divider-color: var(--cpd-surface-0);
+}
+
+.workspace .mod-sidedock,
+.workspace-drawer {
+  --background-secondary: var(--cpd-mantle);
+  --tab-container-background: var(--cpd-mantle);
+  --mobile-sidebar-background: var(--cpd-mantle);
+  --nav-item-color: var(--cpd-subtext-1);
+  --nav-item-color-hover: var(--cpd-text);
+  --nav-item-color-active: var(--cpd-chrome-accent);
+  --nav-item-color-selected: var(--cpd-text);
+  --nav-item-color-highlighted: var(--cpd-chrome-accent);
+  --nav-item-background-hover: var(--cpd-chrome-hover);
+  --nav-item-background-active: var(--cpd-chrome-selected);
+  --nav-item-background-selected: var(--cpd-chrome-selected);
+  --nav-indentation-guide-color: var(--cpd-surface-0);
+  --nav-collapse-icon-color: var(--cpd-subtext-0);
+  --nav-collapse-icon-color-collapsed: var(--cpd-subtext-0);
+  --nav-tag-color: var(--cpd-subtext-0);
+  --vault-profile-color: var(--cpd-text);
+  --vault-profile-color-hover: var(--cpd-chrome-accent);
+}
+
+.workspace .mod-sidedock .search-input-container,
+.workspace-drawer .search-input-container {
+  --background-modifier-form-field: var(--cpd-crust);
+  --background-modifier-form-field-hover: var(--cpd-crust);
+}
+
+.workspace :is(.workspace-tabs, .sidebar-toggle-button, .workspace-ribbon),
+.titlebar,
+.titlebar-button-container {
+  --titlebar-background: var(--cpd-crust);
+  --titlebar-background-focused: var(--cpd-crust);
+  --titlebar-border-color: var(--cpd-surface-0);
+  --titlebar-text-color: var(--cpd-subtext-1);
+  --titlebar-text-color-focused: var(--cpd-text);
+  --tab-container-background: var(--cpd-crust);
+  --sidebar-tab-container-background: var(--cpd-crust);
+  --tab-outline-color: var(--cpd-surface-0);
+}
+
+.workspace .workspace-tabs {
+  --tab-background-active: var(--cpd-mantle);
+  --tab-divider-color: var(--cpd-surface-0);
+  --tab-text-color: var(--cpd-subtext-1);
+  --tab-text-color-active: var(--cpd-text);
+  --tab-text-color-focused: var(--cpd-subtext-1);
+  --tab-text-color-focused-active: var(--cpd-text);
+  --tab-text-color-focused-highlighted: color-mix(in srgb, var(--cpd-mauve) var(--cpd-ink-accent), var(--cpd-text));
+  --tab-text-color-focused-active-current: var(--cpd-text);
+}
+
+.workspace .workspace-ribbon {
+  --ribbon-background: var(--cpd-crust);
+  --ribbon-background-collapsed: var(--cpd-crust);
+}
+
+.workspace-ribbon.mod-primary .side-dock-ribbon-action {
+  /* The shared hover tint is too close to Crust on Latte. */
+  --background-modifier-hover: var(--cpd-surface-0);
+  --icon-color-hover: var(--cpd-chrome-accent);
+}
+
+.workspace .view-header {
+  --file-header-background: var(--cpd-mantle);
+  --file-header-background-focused: var(--cpd-mantle);
+}
+
+.status-bar {
+  --status-bar-background: var(--cpd-crust);
+  --status-bar-border-color: var(--cpd-surface-0);
+  --status-bar-text-color: var(--cpd-subtext-1);
+}
+
+/* Settings and the theme browser use these colors in either window layout. */
+.modal.mod-settings,
+.modal.mod-community-theme {
+  --settings-background: var(--cpd-base);
+  --modal-background: var(--cpd-base);
+  --background-primary: var(--cpd-base);
+  --modal-sidebar-background: var(--cpd-mantle);
+  --setting-items-background: color-mix(in srgb, var(--cpd-surface-0) 32%, var(--cpd-base));
+  --setting-items-border-color: var(--cpd-surface-0);
+  --setting-items-divider-color: var(--cpd-surface-0);
+  --setting-group-heading-color: var(--cpd-text);
+  --setting-item-name-color: var(--cpd-text);
+  --background-modifier-border: var(--cpd-surface-0);
+  --background-modifier-form-field: var(--cpd-crust);
+  --background-modifier-form-field-hover: var(--cpd-crust);
+  --input-placeholder-color: var(--cpd-subtext-1);
+  --interactive-normal: var(--cpd-surface-0);
+  --interactive-hover: color-mix(in srgb, var(--cpd-surface-1) 45%, var(--cpd-surface-0));
+  color: var(--text-normal);
+}
+
+.modal.mod-settings {
+  & .vertical-tab-nav-item.is-active {
+    --background-modifier-hover: var(--cpd-chrome-selected);
+    --text-muted: var(--cpd-chrome-accent);
+    color: var(--cpd-chrome-accent);
+  }
+}
+
+/* The theme catalog has its own modal and grid, including in a pop-out. */
+.modal.mod-community-theme {
+  --background-modifier-border-hover: var(--cpd-overlay-1);
+  --background-modifier-border-focus: var(--cpd-chrome-accent);
+
+  & .modal-sidebar {
+    background-color: var(--cpd-mantle);
+    border-color: var(--divider-color);
+  }
+
+  & .community-item {
+    --background-primary: var(--setting-items-background);
+  }
+}
+
+.mod-root .workspace-leaf-content[data-type="markdown"] > .view-content {
+  /* Start below the note chrome and outside CodeMirror's find panels. */
+  & > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller,
+  & > .markdown-reading-view > .markdown-preview-view {
+    /* Mix lighter Latte accents with Text where they carry small text. */
+    --cpd-ink-mauve: color-mix(in srgb, var(--cpd-mauve) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-ink-blue: color-mix(in srgb, var(--cpd-blue) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-ink-teal: color-mix(in srgb, var(--cpd-teal) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-ink-maroon: color-mix(in srgb, var(--cpd-maroon) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-ink-green: color-mix(in srgb, var(--cpd-green) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-ink-peach: color-mix(in srgb, var(--cpd-peach) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-ink-red: color-mix(in srgb, var(--cpd-red) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-ink-subtext-0: color-mix(in srgb, var(--cpd-subtext-0) var(--cpd-ink-accent), var(--cpd-text));
+    --cpd-quote-text: color-mix(in srgb, var(--cpd-rosewater) 25%, var(--cpd-text));
+
+    /* Obsidian resolves inherited aliases before they reach this scope. */
+    --text-normal: var(--cpd-text);
+    --text-muted: var(--cpd-subtext-1);
+    --text-faint: color-mix(in srgb, var(--cpd-overlay-2) var(--cpd-ink-accent), var(--cpd-text));
+    --text-selection: color-mix(in srgb, var(--cpd-mauve) 24%, transparent);
+    --caret-color: color-mix(in srgb, var(--cpd-rosewater) var(--cpd-ink-accent), var(--cpd-text));
+
+    --inline-title-color: var(--cpd-ink-mauve);
+    --h1-color: var(--cpd-ink-mauve);
+    --h2-color: var(--cpd-ink-mauve);
+    --h3-color: var(--cpd-ink-blue);
+    --h4-color: var(--cpd-ink-blue);
+    --h5-color: var(--cpd-ink-teal);
+    --h6-color: var(--cpd-ink-teal);
+    --bold-color: var(--cpd-ink-mauve);
+    --italic-color: var(--cpd-ink-teal);
+    --text-highlight-bg: var(--highlight-background-yellow);
+    --highlight-background: var(--text-highlight-bg);
+    --highlight-background-red: color-mix(in srgb, var(--cpd-red) 30%, transparent);
+    --highlight-background-orange: color-mix(in srgb, var(--cpd-peach) 30%, transparent);
+    --highlight-background-yellow: color-mix(in srgb, var(--cpd-yellow) 30%, transparent);
+    --highlight-background-green: color-mix(in srgb, var(--cpd-green) 30%, transparent);
+    --highlight-background-blue: color-mix(in srgb, var(--cpd-blue) 30%, transparent);
+    --highlight-background-purple: color-mix(in srgb, var(--cpd-mauve) 30%, transparent);
+
+    --link-color: var(--cpd-ink-mauve);
+    --link-color-hover: var(--cpd-ink-blue);
+    --link-external-color: var(--cpd-blue);
+    --link-external-color-hover: var(--cpd-ink-blue);
+    --link-unresolved-color: var(--cpd-ink-mauve);
+    --link-unresolved-decoration-color: color-mix(in srgb, var(--cpd-lavender) 65%, transparent);
+    --tag-color: var(--cpd-ink-blue);
+    --tag-color-hover: var(--cpd-ink-blue);
+    --tag-background: color-mix(in srgb, var(--cpd-blue) 10%, transparent);
+    --tag-background-hover: color-mix(in srgb, var(--cpd-blue) 20%, transparent);
+    --tag-border-color: color-mix(in srgb, var(--cpd-blue) 15%, transparent);
+    --tag-border-color-hover: var(--tag-border-color);
+
+    --blockquote-color: var(--cpd-quote-text);
+    --blockquote-border-color: var(--cpd-rosewater);
+    --blockquote-background-color: color-mix(in srgb, var(--cpd-rosewater) 6%, transparent);
+    --hr-color: var(--cpd-surface-2);
+    --list-marker-color: var(--text-faint);
+    --list-marker-color-hover: var(--cpd-subtext-1);
+    --list-marker-color-collapsed: var(--cpd-ink-mauve);
+    --checklist-done-color: var(--cpd-ink-subtext-0);
+
+    --table-background: var(--cpd-base);
+    --table-header-background: var(--cpd-surface-0);
+    --table-header-background-hover: var(--table-header-background);
+    --table-header-color: var(--cpd-text);
+    --table-header-border-color: var(--cpd-surface-1);
+    --table-border-color: var(--cpd-surface-2);
+    --table-row-alt-background: color-mix(in srgb, var(--cpd-surface-0) 25%, var(--cpd-base));
+    --table-row-background-hover: var(--table-background);
+    --table-row-alt-background-hover: var(--table-row-alt-background);
+
+    --code-background: var(--cpd-mantle);
+    --code-border-color: var(--cpd-surface-1);
+    --code-normal: var(--cpd-text);
+    --code-comment: var(--cpd-ink-subtext-0);
+    --code-function: var(--cpd-ink-blue);
+    --code-property: var(--cpd-ink-blue);
+    --code-keyword: var(--cpd-ink-mauve);
+    --code-string: var(--cpd-ink-green);
+    --code-value: var(--cpd-ink-peach);
+    --code-operator: var(--cpd-ink-teal);
+    --code-punctuation: var(--cpd-subtext-1);
+    --code-tag: var(--cpd-ink-maroon);
+    --code-important: var(--cpd-ink-red);
+
+    --callout-default: var(--cpd-blue);
+    --callout-summary: var(--cpd-sapphire);
+    --callout-info: var(--cpd-sky);
+    --callout-todo: var(--cpd-lavender);
+    --callout-important: var(--cpd-mauve);
+    --callout-tip: var(--cpd-teal);
+    --callout-success: var(--cpd-green);
+    --callout-question: var(--cpd-yellow);
+    --callout-warning: var(--cpd-peach);
+    --callout-fail: var(--cpd-maroon);
+    --callout-error: var(--cpd-red);
+    --callout-bug: var(--cpd-flamingo);
+    --callout-example: var(--cpd-pink);
+    --callout-quote: var(--cpd-rosewater);
+
+    --mermaid-background: var(--cpd-base);
+    --mermaid-text-color: var(--cpd-text);
+    --mermaid-muted-color: var(--cpd-subtext-0);
+    --mermaid-line-color: var(--cpd-subtext-1);
+    --mermaid-surface: var(--cpd-surface-0);
+    --mermaid-surface-alt: var(--cpd-crust);
+    --mermaid-border-color: var(--cpd-overlay-0);
+    --mermaid-accent: var(--cpd-mauve);
+    --mermaid-critical: var(--cpd-red);
+    --mermaid-error: var(--cpd-red);
+    --mermaid-color-1: var(--cpd-blue);
+    --mermaid-color-2: var(--cpd-peach);
+    --mermaid-color-3: var(--cpd-green);
+    --mermaid-color-4: var(--cpd-red);
+    --mermaid-color-5: var(--cpd-sapphire);
+    --mermaid-color-6: var(--cpd-yellow);
+    --mermaid-color-7: var(--cpd-mauve);
+    --mermaid-color-8: var(--cpd-pink);
+
+    color: var(--text-normal);
+    background-color: var(--cpd-base);
+
+    & :is(del, s, .cm-strikethrough:not(.hmd-hidden-token, .hidden-token)) {
+      color: var(--cpd-ink-maroon);
+      text-decoration-color: var(--cpd-ink-maroon);
+    }
+
+    & :is(code:not(pre code), .cm-line:not(.HyperMD-codeblock) .cm-inline-code:not(.cm-hmd-indented-code)) {
+      --code-normal: var(--cpd-ink-mauve);
+    }
+
+    & :is(.math, .cm-math) {
+      color: var(--cpd-ink-teal);
+    }
+
+    & .callout {
+      --callout-title-color: color-mix(in srgb, var(--callout-color) var(--cpd-callout-title-accent), var(--cpd-text));
+    }
+
+    & .cm-formatting-quote:not(.hmd-hidden-token, .hidden-token) {
+      color: var(--cpd-quote-text);
+    }
+
+    /* The native quote rule takes precedence over emphasis on CM spans. */
+    & .cm-quote.cm-strong {
+      --blockquote-color: var(--bold-color);
+    }
+
+    & .cm-quote.cm-em {
+      --blockquote-color: var(--italic-color);
+    }
+
+    & .task-list-item-checkbox {
+      --checkbox-border-color: var(--cpd-overlay-2);
+      --checkbox-border-color-hover: color-mix(in srgb, var(--cpd-overlay-1) 55%, var(--cpd-text));
+      --checkbox-color: var(--cpd-ink-green);
+      --checkbox-color-hover: color-mix(in srgb, var(--checkbox-color) 80%, var(--cpd-text));
+      --checkbox-marker-color: var(--cpd-base);
+    }
+
+    & .cm-formatting-task:not(.hmd-hidden-token, .hidden-token) {
+      color: var(--list-marker-color);
+    }
+
+    & :is(ol > li)::marker {
+      color: var(--list-marker-color);
+    }
+
+    /* Source Mode exposes a nonblank task marker through cm-property. */
+    & .cm-formatting-task.cm-property:not(.hmd-hidden-token, .hidden-token) {
+      color: var(--cpd-ink-green);
+    }
+
+    & .cm-hmd-codeblock.cm-atom {
+      color: var(--code-value);
+    }
+  }
+}
