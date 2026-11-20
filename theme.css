@@ -327,7 +327,6 @@
 
     & :is(del, s, .cm-strikethrough:not(.hmd-hidden-token, .hidden-token)) {
       color: var(--cpd-ink-maroon);
-      text-decoration-color: var(--cpd-ink-maroon);
     }
 
     & :is(code:not(pre code), .cm-line:not(.HyperMD-codeblock) .cm-inline-code:not(.cm-hmd-indented-code)) {
