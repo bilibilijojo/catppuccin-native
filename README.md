@@ -1,6 +1,26 @@
 # Catppuccin Native
 
-Catppuccin Native 是一款独立的 Obsidian 社区主题。浅色使用 Catppuccin Latte，深色使用 Catppuccin Frappé。配色覆盖正文、侧栏、设置和社区主题浏览器，字体、排版与交互沿用 Obsidian Default。
+**原生 Obsidian，Catppuccin 色彩。**
+
+Catppuccin Native 是一款专为 Obsidian 打造的配色主题，将精美的 Catppuccin 调色板融入 Obsidian 原生使用体验。
+
+主题以简洁与一致性为设计理念，在完整保留 Obsidian 默认主题视觉风格的基础上，引入 Catppuccin 柔和、协调的色彩。
+
+### 主要特性
+
+- **双配色方案** —— 浅色模式采用 Catppuccin Latte，深色模式采用 Catppuccin Frappé。
+- **原生使用体验** —— 保留 Obsidian 默认的字体、布局、间距及界面设计。
+- **统一视觉风格** —— 确保实时预览、源码模式与阅读视图拥有一致的配色体验。
+- **工作区配色** —— 为笔记、侧栏、设置和社区主题浏览器应用协调的 Catppuccin 配色。
+- **轻量化设计** —— 纯 CSS 实现，无需额外插件或 JavaScript 依赖。
+
+### 设计理念
+
+不做多余的重新设计，不制造视觉上的干扰。
+
+保留你熟悉的 Obsidian 使用体验，换上你喜爱的 Catppuccin 色彩。
+
+**保持原生，忠于 Catppuccin。**
 
 ![Catppuccin Native 的 Frappé 工作区预览](screenshot.png)
 
