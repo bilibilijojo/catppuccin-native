@@ -24,7 +24,7 @@ Catppuccin Native 是一款专为 Obsidian 打造的配色主题，将精美的 
 
 **保持原生，忠于 Catppuccin。**
 
-![Catppuccin Native 的 Frappé 工作区预览](screenshot.png)
+![Catppuccin Native 的 Latte 与 Frappé 原创预览封面](screenshot.png)
 
 ## 安装
 

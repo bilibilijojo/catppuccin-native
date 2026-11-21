@@ -24,7 +24,7 @@ Just the Obsidian experience you already know, in the colors you love.
 
 [简体中文](README.zh-CN.md)
 
-![Catppuccin Native in Frappé mode](screenshot.png)
+![Catppuccin Native cover with Latte and Frappé palettes](screenshot.png)
 
 ## Installation
 
